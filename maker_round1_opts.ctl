@@ -38,7 +38,7 @@ fgenesh_par_file= #FGENESH parameter file
 pred_gff= #ab-initio predictions from an external GFF3 file
 model_gff= #annotated gene models from an external GFF3 file (annotation pass-through)
 est2genome=0 #infer gene predictions directly from ESTs, 1 = yes, 0 = no
-protein2genome=0 #infer predictions from protein homology, 1 = yes, 0 = no
+protein2genome=1 #infer predictions from protein homology, 1 = yes, 0 = no
 trna=0 #find tRNAs with tRNAscan, 1 = yes, 0 = no
 snoscan_rrna= #rRNA file to have Snoscan find snoRNAs
 unmask=0 #also run ab-initio prediction programs on unmasked sequence, 1 = yes, 0 = no

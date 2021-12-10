@@ -22,3 +22,5 @@ maker -CTL
 #SBATCH --mem-per-cpu=5G
 
 mpiexec -n 106 maker
+
+# job took longer than 48 hours, needed to restart (10 Dec 2021)

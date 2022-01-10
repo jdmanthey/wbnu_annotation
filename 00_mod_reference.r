@@ -1,13 +1,12 @@
-
 library(Biostrings)
 
 # define output directory
 outdir <- "wbnu_scaffolds"
 dir.create(outdir)
 
-genome <- readDNAStringSet("wbnu_genome_NewNames__final_assembly.fasta")
+genome <- readDNAStringSet("WBNU_corrected_nameTrim_final_assembly.fasta")
 
-# keep only scaffolds >= 1Mbp (98.95%, 1,021,413,974 bases)
+# keep only scaffolds >= 1Mbp (98.95%, 1,021,383,967 bases)
 genome2 <- genome[genome@ranges@width >= 1000000]
 
 genome_names <- genome2@ranges@NAMES[genome2@ranges@width >= 1000000]

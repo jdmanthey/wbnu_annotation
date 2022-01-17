@@ -34,6 +34,8 @@ mv wbnu.maker.output/ maker_output_round1/
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=5G
 
+source activate busco
+
 mpiexec -n 106 maker
 
 

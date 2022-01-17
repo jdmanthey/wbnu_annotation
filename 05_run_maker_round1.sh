@@ -23,4 +23,4 @@ maker -CTL
 
 mpiexec -n 106 maker
 
-# job took longer than 48 hours, needed to restart (10 Dec 2021)
+# job took longer than 48 hours, needed to restart (14 Jan 2022)

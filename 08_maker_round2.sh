@@ -42,7 +42,7 @@ mpiexec -n 106 maker
 
 # summarize maker output
 
-cd /lustre/scratch/jmanthey/00_certhia_maker/wbnu.maker.output
+cd /lustre/scratch/jmanthey/00_wbnu_maker/wbnu.maker.output
 
 gff3_merge -s -d wbnu_master_datastore_index.log > wbnu_round2.all.maker.gff
 fasta_merge -d wbnu_master_datastore_index.log

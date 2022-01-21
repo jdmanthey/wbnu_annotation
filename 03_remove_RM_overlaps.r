@@ -47,7 +47,10 @@ for(a in 1:nrow(genome_index)) {
 			# possible higher matches
 			b_rep2 <- x_rep[potential_overlaps[potential_overlaps[,1] %in% b,2],]
 			if(nrow(b_rep2) > 0) {
-				# keep only possible alternatives with 
+				# check if any overlaps have the same perc_div, if so, add a tiny bit of div to the second match
+				b_rep2[b_rep2$perc_div == b_rep$perc_div[1] & as.numeric(rownames(b_rep2)) > as.numeric(rownames(b_rep))[1],2] <- b_rep$perc_div[1] + 0.00001
+				b_rep[TRUE %in% (b_rep2$perc_div == b_rep$perc_div[1] & as.numeric(rownames(b_rep2)) < as.numeric(rownames(b_rep))[1]),2] <- b_rep$perc_div[1] + 0.00001
+				# keep only possible alternatives with higher identity
 				b_rep2 <- b_rep2[b_rep2[,2] < b_rep[1,2],]
 				# if no better matches write, otherwise carry on
 				if(nrow(b_rep2) > 0) {
